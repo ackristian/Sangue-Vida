@@ -1,0 +1,47 @@
+<ui:composition template="/WEB-INF/templates/LayoutPadrao.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui">
+
+	<ui:define name="corpo">
+		<h1 class="aw-page-title">Relatório</h1>
+		<f:metadata>
+			<o:viewParam name="" value=""/>
+		</f:metadata>
+
+		<h:form id="frmCadastro" enctype="multipart/form-data">
+			<p:toolbar>
+				<p:toolbarGroup>
+					<p:commandButton value="Emitir" icon="ui-icon-folder-collapsed" update="@form"
+						id="botaoSalvar" action="#{relatorioDoadoresBean.emitir}" ajax="false" />
+				</p:toolbarGroup>
+				
+			</p:toolbar>
+
+			<p:messages id="messages" autoUpdate="true" closable="true" />
+			<div class ="ui-fluid">
+			
+			<p:panelGrid columns="4" id="painel" layout="grid" styleClass="panelgrid-noborder ui-fluid" 
+				style="width: 100%; margin-top: 20px" columnClasses="rotulo, campo">
+				<p:outputLabel value="Data de criação" />
+				<h:panelGroup>
+				
+					<p:outputLabel/>
+					<p:outputLabel/>
+					<p:calendar value="#{relatorioDoadoresBean.dataInicio}"
+						label="Data inicial" pattern="dd/MM/yyyy" size="8" />
+					<p:spacer width="8" />
+					<h:outputText value="a" />
+					<p:spacer width="8" />
+					<p:calendar value="#{relatorioDoadoresBean.dataFim}"
+						label="Data final" pattern="dd/MM/yyyy" size="8" />
+				</h:panelGroup>
+			</p:panelGrid>
+			</div>
+		</h:form>
+
+	</ui:define>
+
+</ui:composition>

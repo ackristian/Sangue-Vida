@@ -1,0 +1,95 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</f:facet>
+
+	<title>Sangue-vida</title>
+
+	<h:outputStylesheet library="sulasoftwares" name="styles/custom.css" />
+	<h:outputStylesheet library="sulasoftwares" name="styles/layout.css" />
+	<h:outputStylesheet library="sulasoftwares" name="styles/components.css" />
+
+	<h:outputScript target="body" library="primefaces"
+		name="jquery/jquery.js" />
+	<h:outputScript target="body" library="sulasoftwares"
+		name="javascripts/app.js" />
+
+</h:head>
+
+<h:body>
+	
+	<header class="aw-topbar">
+	<!--<h:graphicImage library="sistemaweb" name="images/LOGO-AC.png" />--> 
+		
+		<a href="#" class="aw-toggle  js-toggle"><i class="fa  fa-bars"></i></a>
+
+		<span
+			style="float: right; height: 30px; line-height: 100px; margin-right: 20px; font-family: Century Gothic; font-size: 15px; color: #ffffff">
+			Doe Sangue e salve Vidas! </span>
+
+	</header>
+	
+	<aside class="aw-sidebar  js-sidebar">
+		<h:form>
+		<nav class="aw-menu">
+			<ul>
+				<li><h:link outcome="/Home.xhtml">
+						<i class="fa  fa-fw  fa-home"></i>Pagina-Inicial</h:link></li>
+				<li><h:link>
+						<i class="fa  fa-fw  fa-arrow-down"></i>Cadastros</h:link>
+					<ul>
+						<li><h:link outcome="/doadores/PesquisaDoador.xhtml">
+								<i class="fa  fa-fw  fa-group"></i>Doadores</h:link></li>
+								
+						<li><h:link outcome="/necessitados/PesquisaPacientes.xhtml">
+								<i class="fa  fa-fw  fa-heartbeat"></i>Pacientes</h:link></li>
+								
+						<li><h:link outcome="/relatorios/relatorio.xhtml">
+								<i class="fa  fa-fw  fa-file-pdf-o"></i>Relatórios</h:link></li>
+								
+						<li><h:link outcome="/graficos/Grafico.xhtml">
+								<i class="fa  fa-fw  fa-bar-chart-o"></i>Estatistíca</h:link></li>		
+					</ul></li>
+				<p:menubar style="border-style: none; ">
+					<p:menuitem style="font-family: Impact, Charcoal, sans-serif"
+						icon="ui-icon-extlink" value="Sair"
+						url="/j_spring_security_logout" />
+				</p:menubar>
+
+			</ul>
+		</nav>
+		</h:form>
+	</aside>
+
+	<section class="aw-content  js-content">
+		<ui:insert name="corpo" />
+		<p:outputPanel deferred="true" deferredMode="visible"
+			style="color: #00162d; margin-top:20px;">
+			<h4 style="float: left;">© Copyright 2017 - Sangue-Vida - Grupo ISP-H</h4>
+			<h3 style="float: right;">
+				<h:link href="#"
+					style="float: right; font-size: 20px; color: #002b55">
+					<i class="fa  fa-fw  fa-twitter-square"></i>
+				</h:link>
+				<h:link href="#"
+					style="float: right;font-size: 20px; color: #002b55">
+					<i class="fa  fa-fw  fa-instagram"></i>
+				</h:link>
+				<h:link href="#"
+					style="float: right; font-size: 20px; color: #002b55	">
+					<i class="fa  fa-fw  fa-facebook-square"></i>
+				</h:link>
+			</h3>
+		</p:outputPanel>
+	</section>
+
+</h:body>
+</html>
