@@ -35,11 +35,19 @@
 				
 								<p:outputLabel value="Cidade" for="cidade" />
 							<p:inputText id="cidade" size="100"
+							title="Informe o nome da cidade em que se encontra!"
 								value="#{pesquisaDoadorBean.filtro.cidade}"/>
 							
 								<p:outputLabel value="Grupo sanguinio" for="Gs" />
 							<p:inputText id="Gs" size="100"
+							title="Informe o gorupo sanguinio que necessita!"
 								value="#{pesquisaDoadorBean.filtro.gsanguinio}" />
+								
+									<p:outputLabel value="B.I" for="bi" />
+							<p:inputText id="bi" size="100" 
+							title="Filtro de doadores para actualizar informações do perfil!" 
+								value="#{pesquisaDoadorBean.filtro.bi}" />
+								<p:tooltip showEvent="focus" hideEvent="blur" />
 						</p:panelGrid>
 					</p:tab>
 				</p:tabView>

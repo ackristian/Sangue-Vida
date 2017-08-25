@@ -99,6 +99,10 @@ public Doador porCodigo(Long codigo) {
 			   criteria.add(Restrictions.ilike("cidade", filtro.getCidade(),MatchMode.ANYWHERE));
 		   }
 		   
+		   if(StringUtils.isNotBlank(filtro.getBi())){
+			   criteria.add(Restrictions.ilike("bi", filtro.getBi(),MatchMode.ANYWHERE));
+		   }
+		   
 		   return criteria.addOrder(Order.asc("nome")).list();
 	}
 
