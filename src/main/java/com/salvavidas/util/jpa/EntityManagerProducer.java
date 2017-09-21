@@ -13,8 +13,8 @@ public class EntityManagerProducer {
 
 	private EntityManagerFactory factory;
 
-	public EntityManagerProducer() {
-		this.factory = Persistence.createEntityManagerFactory("SalvavidasPU");
+	public EntityManagerProducer() throws Exception {
+		this.factory = Persistence.createEntityManagerFactory("SalvavidasPU", PersistenceProperties.get());
 	}
 
 	@Produces
