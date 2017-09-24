@@ -100,7 +100,7 @@ public Doador porCodigo(Long codigo) {
 		   }
 		   
 		   if(StringUtils.isNotBlank(filtro.getBi())){
-			   criteria.add(Restrictions.ilike("bi", filtro.getBi(),MatchMode.ANYWHERE));
+			   criteria.add(Restrictions.eq("bi", filtro.getBi()));
 		   }
 		   
 		   return criteria.addOrder(Order.asc("nome")).list();
