@@ -21,15 +21,15 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
+
 			<!-- Testando sol bug deploy -->
 			<plugin>
-	<groupId>org.apache.maven.plugins</groupId>
-	<artifactId>maven-dependency-plugin</artifactId>
-	<version>2.3</version>
-</plugin>
- 
-</plugins>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+			</plugin>
+
+		</plugins>
 	</build>
 
 	<dependencies>
@@ -126,14 +126,14 @@
 			<version>5.1.2</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<!-- Para corrigir o bug do jasoer em deploy -->
-				<dependency>
-		      <groupId>com.lowagie</groupId>
-		      <artifactId>itext</artifactId>
-		      <version>2.1.7</version>
-		      </dependency>
-      
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.codehaus.groovy</groupId>
 			<artifactId>groovy-all</artifactId>
@@ -195,6 +195,13 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Dependencia do webjars runner -->
+		<dependency>
+			<groupId>org.webjars.npm</groupId>
+			<artifactId>loader-runner</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
 		<!-- Icons do PrimeFaces -->
 		<!--<dependency> <groupId>org.webjars</groupId> <artifactId>font-awesome</artifactId> 
 			<version>4.7.0</version> </dependency> -->
@@ -214,28 +221,28 @@
 			<name>public-jboss</name>
 			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
 		</repository>
-		
+
 		<!-- Repositorios para tentar resolver o erro do jasper no deploy -->
-			<repository>
-	    <id>jasper</id>
-	    <url>http://jasperreports.sourceforge.net/maven2/</url>
-	    <releases>
-	    <enabled>true</enabled>
-	    </releases>
-	    <snapshots>
-	    <enabled>false</enabled>
-	    </snapshots>
-	</repository>     
-	<repository>
-	    <id>jasper1</id>
-	    <url>http://jaspersoft.artifactoryonline.com/jaspersoft/jaspersoft-repo/</url>
-	    <releases>
-	    <enabled>true</enabled>
-	    </releases>
-	    <snapshots>
-	    <enabled>false</enabled>
-	    </snapshots>
-	</repository> 
+		<repository>
+			<id>jasper</id>
+			<url>http://jasperreports.sourceforge.net/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jasper1</id>
+			<url>http://jaspersoft.artifactoryonline.com/jaspersoft/jaspersoft-repo/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 </project>
