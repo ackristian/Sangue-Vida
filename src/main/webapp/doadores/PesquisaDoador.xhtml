@@ -17,6 +17,19 @@
 					<p:button value="Novo doador" icon="ui-icon-person"
 						id="botaoNovo" outcome="/doadores/CadastroDoador.xhtml" />
 				</p:toolbarGroup>
+				
+				<p:toolbarGroup align="right">
+					<h:commandLink>
+					<p:commandButton value="Baixar-lista-Doadores" 
+					icon="fa fa-fw fa-download" type="button" ajax="false" width="24" />
+					<p:dataExporter type="pdf" target="doadoresTable" 
+                fileName="doadores"/>
+               		</h:commandLink>
+					
+				</p:toolbarGroup>
+				
+				
+				
 				<p:toolbarGroup>
 					<p:commandButton value="Pesquisa" icon="ui-icon-folder-collapsed"
 						id="botaoPesquisa" action="#{pesquisaDoadorBean.pesquisar}"
@@ -59,7 +72,7 @@
 				style="margin-top: 30px" paginator="true"
 				paginatorAlwaysVisible="true" paginatorPosition="bottom">
 
-				<p:column style="width:16px">
+				<p:column style="width:16px" exportable="false">
 					<p:rowToggler />
 				</p:column>
 				<p:column headerText="Nome">
@@ -101,7 +114,7 @@
 				</p:column>
 
 
-				<p:column headerText="Foto" style="width: 50px; text-align: center">
+				<p:column headerText="Foto" style="width: 50px; text-align: center" exportable="false">
 					<p:commandButton icon="ui-icon-extlink" title="Imagem"
 						process="@this" oncomplete="PF('mostraImagem').show()"
 						update=":frmPesquisa:mostraImagemDialog">
@@ -109,7 +122,7 @@
 							target="#{fotoDoadorBean.doadorSelecionado}" value="#{doador}" />
 					</p:commandButton>
 				</p:column>
-				<p:column headerText="Acão" style="width: 100px; text-align: center">
+				<p:column headerText="Acão" style="width: 100px; text-align: center" exportable="false">
 					<p:button outcome="CadastroDoador" icon="ui-icon-pencil"
 						title="Editar">
 						<f:param name="doador" value="#{doador.codigo}" />
