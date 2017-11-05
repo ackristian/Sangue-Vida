@@ -40,9 +40,21 @@ public class PesquisaDoadorBean implements Serializable {
 	
 	@PostConstruct
 	public void inicializar(){
-		this.totalDoadores = doadores.buscarTodos().size();
-		this.totalPacientes = pacientes.buscarTodos().size();
-	}
+		
+			/*try {
+				this.totalDoadores = doadores.buscarTodos().size();
+				this.totalPacientes = pacientes.buscarTodos().size();
+		
+			} catch (Exception e) {
+				FacesUtil.addErrorMessage(e.getMessage());
+			
+			}*/
+			
+		}
+		
+	
+	
+	
 	
 	public PesquisaDoadorBean(){
 		filtro = new DoadorFilter();
