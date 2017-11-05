@@ -4,6 +4,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
+import javax.inject.Inject;
 
 import com.salvavidas.model.Doador;
 import com.salvavidas.repository.Doadores;
@@ -11,7 +12,8 @@ import com.salvavidas.util.cdi.CDIServiceLocator;
 
 @FacesConverter(forClass=Doador.class)
 public class DoadorConverter implements Converter {
-
+			
+			@Inject
 			private Doadores doadores;
 			
 			public DoadorConverter() {

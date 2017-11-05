@@ -4,6 +4,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
+import javax.inject.Inject;
 
 import com.salvavidas.model.Paciente;
 import com.salvavidas.repository.Pacientes;
@@ -11,7 +12,8 @@ import com.salvavidas.util.cdi.CDIServiceLocator;
 
 @FacesConverter(forClass=Paciente.class)
 public class PacienteConverter implements Converter {
-
+			
+			@Inject
 			private Pacientes pacientes;
 			
 			public PacienteConverter() {
