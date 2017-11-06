@@ -13,8 +13,10 @@ import com.salvavidas.util.cdi.CDIServiceLocator;
 @FacesConverter(forClass=Doador.class)
 public class DoadorConverter implements Converter {
 			
-			//@Inject
-			private Doadores doadores = new Doadores();
+			@Inject
+			private Doadores doadores;
+			
+			//Doadores doadores = new Doadores();
 			
 			public DoadorConverter() {
 				this.doadores = (Doadores) CDIServiceLocator.getBean(Doadores.class);

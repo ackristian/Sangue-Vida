@@ -8,11 +8,6 @@ import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-
-
-
-
-
 import com.salvavidas.model.Doador;
 import com.salvavidas.repository.Doadores;
 import com.salvavidas.repository.Pacientes;
@@ -52,8 +47,6 @@ public class PesquisaDoadorBean implements Serializable {
 			
 		}
 		
-	
-	
 	
 	
 	public PesquisaDoadorBean(){

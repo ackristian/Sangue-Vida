@@ -16,6 +16,8 @@ public class PacienteConverter implements Converter {
 			@Inject
 			private Pacientes pacientes;
 			
+			//Pacientes pacientes = new Pacientes();
+	
 			public PacienteConverter() {
 				this.pacientes = (Pacientes) CDIServiceLocator.getBean(Pacientes.class);
 			}
