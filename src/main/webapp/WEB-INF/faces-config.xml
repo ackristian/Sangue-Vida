@@ -17,4 +17,10 @@
 		</locale-config>
 	</application>
 	
+	<application>
+	  <message-bundle>com.salvavidas.converter.DoadorConverter</message-bundle>
+  </application>
+	
+	
+	
 </faces-config>
